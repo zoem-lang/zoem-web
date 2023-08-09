@@ -1,0 +1,431 @@
+f*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: white;
+  --text-color: black;
+  --secondary-color: #767676;
+  --accent-color: blue;
+  --secondary-accent-color: #6666ca;
+  --font-family: "IBM Plex Serif", serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  height: 100%;
+  max-width: 1200px;
+  font-family: var(--font-family);
+  /* line-height: 1.5; */
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+a[href^="http"]:after {
+  content: "↗";
+  margin-left: 0.2em;
+}
+
+/* https://type-scale.spencermortensen.com/4/3/0/1em */
+h1 { font-size: 3em; }
+h2 { font-size: 2.2795em; }
+h3 { font-size: 1.7321em; }
+h4 { font-size: 1.3161em; }
+small { font-size: .7598em; }
+
+li {
+  line-height: 1.5;
+  margin: 1.5em 0;
+}
+
+.big-link {
+  font-size: 1.5em;
+}
+
+kbd {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8em;
+  display: inline-block;
+  padding: 3px 6px;
+  margin: 3px;
+  border-radius: 3px;
+  background-color: #e9e9e9;
+}
+
+h2 {
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.5;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+/*
+      ___       __   ___  __
+|__| |__   /\  |  \ |__  |__)
+|  | |___ /~~\ |__/ |___ |  \
+
+*/
+
+header {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+}
+
+.title a {
+  color: var(--text-color);
+  border: none;
+}
+
+.nav {
+  display: none;
+}
+  @media (min-width: 800px) {
+    .nav {
+      display: block;
+    }
+  }
+
+.nav.open {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.navToggle {
+  top: 1.6em;
+  right: 1.5em;
+  display: block;
+  font-size: 2em;
+  border: 0;
+  z-index: 2;
+  font-family: var(--font-family);
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+  @media (min-width: 800px) {
+    .navToggle {
+      display: none;
+    }
+  }
+
+.nav.open .nav__items {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+}
+
+.nav__items {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+  @media (min-width: 800px) {
+    .nav__items {
+      display: flex;
+    }
+  }
+
+.nav__item {
+  padding: 10px;
+  margin: 0;
+}
+
+.nav__item a {
+  display: inline-block;
+}
+
+/*
+
+ |\/|  /\  | |\ |
+ |  | /~~\ | | \|
+
+*/
+
+.navIsOpen main {
+  display: none;
+}
+
+main {
+  /* margin: 100px 3em; */
+  margin: 50px 0;
+  padding: 0 3em;
+  display: grid;
+  gap: 50px;
+}
+  @media (min-width: 800px) {
+    main {
+      margin: 100px 0;
+    }
+  }
+
+.about {
+  position: relative;
+}
+
+main > div {
+  width: 600px;
+  max-width: 100%;
+  margin: auto;
+}
+
+main > div p {
+  width: 100%;
+}
+
+.intro {
+  max-width: 800px;
+  font-size: 1.2em;
+  text-align: center;
+}
+  @media (min-width: 800px) {
+    .intro {
+      font-size: 2.5em;
+    }
+  }
+
+.intro blockquote {
+  margin: 0;
+  line-height: 1;
+  font-size: 2em;
+  position: relative;
+  font-style: italic;
+}
+
+.intro blockquote p {
+  margin-top: 2em;
+}
+
+.intro p {
+  color: var(--secondary-color);
+}
+  @media (min-width: 800px) {
+    .intro p {
+      font-size: 1.3161rem;
+    }
+  }
+
+.intro > p {
+  margin-top: 4em;
+}
+
+.intro p a {
+  color: var(--secondary-accent-color);
+}
+
+.help {
+  text-align: center;
+  font-style: italic;
+}
+
+.example {
+  margin: 2em 0;
+}
+
+pre {
+  padding: 2em;
+  background-color: #f9f9f9;
+}
+  @media (min-width: 800px) {
+    pre {
+      padding: 4em;
+    }
+  }
+
+code {
+  font-family: "IBM Plex Mono", monospace;
+  white-space: break-spaces;
+}
+
+.zoem {
+  width: 100%;
+  max-width: 1000px;
+  /* display: grid; */
+  /* grid-template-columns: 50% 50%; */
+  /* gap: 20px; */
+  font-size: 1.2em;
+}
+  @media (min-width: 800px) {
+    .zoem {
+      font-size: 1.5em;
+    }
+  }
+
+.filename-ext {
+  color: var(--secondary-color);
+}
+
+sup {
+  display: none;
+}
+
+.sidenote-num {
+  display: none;
+}
+
+  @media (min-width: 1200px) {
+    .sidenote {
+      width: 17vw;
+      position: absolute;
+      top: 460px;
+      left: -34vw;
+      right: 34vw;
+      color: var(--secondary-color);
+      font-size: 0.8em;
+    }
+
+    .sidenote p {
+      line-height: 1.875;
+      margin-top: 1.875em;
+      margin-bottom: 1.875em;
+    }
+
+    .sidenote a {
+      color: var(--secondary-accent-color);
+    }
+
+    .sidenote-num {
+      display: inline-block;
+      margin-right: 1em;
+    }
+
+    sup {
+      display: inline;
+    }
+  }
+
+/* REFERENCE */
+
+.ref-toc {
+  position: initial;
+}
+
+  @media (min-width: 1200px) {
+    .ref-toc {
+      position: fixed;
+      top: 18vh;
+      left: 6vw;
+    }
+  }
+
+.ref-toc ul {
+  padding-left: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+  @media (min-width: 1200px) {
+    .ref-toc ul {
+      display: initial;
+      gap: initial;
+    }
+  }
+
+.ref-toc li {
+  list-style-type: none;
+  margin: 0;
+}
+
+.ref-list > div {
+  margin: 10em 0;
+}
+
+.ref-list dd {
+  margin-left: 0;
+}
+
+.ref-term,
+.ref-term-variant {
+  font-size: 1.5em;
+}
+
+.ref-term-ipa {
+  color: #818081;
+  margin-left: 1em;
+}
+
+.ref-term-def {
+  padding: 0;
+  counter-reset: li;
+}
+
+.ref-term-def li {
+  position: relative;
+  list-style-type: none;
+  margin-left: 1.5em;
+}
+
+.ref-term-def li::before {
+  position: absolute;
+  top: 0.1em;
+  left: -20px;        
+  width: 1.75em;
+  height: 1.75em;
+  margin-right: 12px;       
+  content: counter(li);
+  counter-increment: li;
+  font-weight: 600;
+  color: #aaa;
+  font-size: .9em;
+}
+
+.ref-term-def,
+.ref-term-also {
+  margin-left: 1em;
+}
+
+.ref-term-origin-heading {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #818081;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5em;
+  font-size: 0.9em;
+}
+
+/*
+ ___  __   __  ___  ___  __
+|__  /  \ /  \  |  |__  |__)
+|    \__/ \__/  |  |___ |  \
+
+*/
+
+.navIsOpen footer {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  /* margin: 20px 100px; */
+  margin: 2em;
+}

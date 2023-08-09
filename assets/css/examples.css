@@ -1,0 +1,99 @@
+:root {
+  --block-color: #e9e9e9;
+  --secondary-color: #737373;
+}
+
+code {
+  font-family: "IBM Plex Serif", serif;
+  white-space: break-spaces;
+}
+
+.token {
+  display: inline-block;
+  padding: 0 0.05em;
+  border-radius: 5px;
+  position: relative;
+  margin: -0.05em;
+  font-family: 'IBM Plex Serif', serif;
+  font-style: italic;
+}
+
+.token:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.var,
+.function {
+  font-family: 'IBM Plex Mono', monospace;
+  font-style: normal;
+}
+
+.operator {
+  font-style: normal;
+}
+
+.string {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.comment {
+  color: var(--secondary-color);
+}
+
+.comment .symbol {
+  /* font-style: normal; */
+}
+
+code .token:hover::after {
+  position: absolute;
+  bottom: 100%;
+  width: max-content;
+  left: 0;
+  color: grey;
+  background-color: white;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  padding: 0.2em 0.5em;
+  font-size: 0.6em;
+  opacity: 1 !important;
+}
+
+code .directive:hover::after { content: "Directive, denoted by a # (pound)."; }
+code .comment:hover::after { content: "Comment, denoted by a † (dagger)."; }
+code .let:hover::after { content: "Declares a variable."; }
+code .var:hover::after { content: "Variable name."; }
+code .function:hover::after { content: "Function name."; }
+code .be:hover::after { content: "Assigns the right expressions to the left token."; }
+code .string:hover::after { content: "String."; }
+code .if:hover::after { content: "Performs the actions in the block if the condition is true."; }
+code .else:hover::after { content: "Performs the actions in the block if the condition is false."; }
+code .while:hover::after { content: "Performs the actions in the block as long as the condition is true."; }
+code .boolean:hover::after { content: "Boolean of true or false."; }
+code .nothing:hover::after { content: "Null value."; }
+code .comparison:hover::after { content: "Compares the left and right expressions."; }
+code .colon:hover::after { content: "Begins a block."; }
+code .dot:hover::after { content: "Ends a block."; }
+code .to:hover::after { content: "Declares a function."; }
+code .print:hover::after { content: "Prints contents in a comment to the right of the line."; }
+code .know:hover::after { content: "Alias for the print function."; }
+code .say:hover::after { content: "Alias for the print function."; }
+code .emdash:hover::after { content: "Holds arguments for a conditional, loop, or function." }
+code .ampersand:hover::after { content: "Returns the following value."; }
+code .comma:hover::after { content: "Separates arguments in a list."; }
+code .not:hover::after { content: "Negates the following value."; }
+code .maybe:hover::after { content: "Equals true or false randomly."; }
+code .and:hover::after { content: "Compares two expressions and returns true if both are true."; }
+code .or:hover::after { content: "Compares two expressions and returns true if one or both are true."; }
+
+code .memyselfI:hover::after { content: "RegEx variable name. Matches me, myself, or I."; }
+code .memyself:hover::after { content: "RegEx variable name. Matches me or myself."; }
+code .sleep:hover::after { content: "RegEx variable name. Matches sleep or seep."; }
+code .meI:hover::after { content: "RegEx variable name. Matches me or I."; }
+code .see:hover::after { content: "RegEx variable name. Matches see or sea."; }
+code .mist:hover::after { content: "RegEx variable name. Matches mist or missed."; }
+code .mourning:hover::after { content: "RegEx variable name. Matches mourning or morning."; }
+
+.placeholder {
+  background-color: var(--block-color);
+}

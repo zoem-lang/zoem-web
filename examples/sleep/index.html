@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zoem | sleep.zoem</title>
+  <meta name="description" content="A poetic programming language.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/examples.css" />
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="/assets/img/logo/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <header>
+    <h1 class="title"><a href="/">Zoem</a></h1>
+    <button class="navToggle" aria-label="Toggle menu">☰</button>
+    <nav class="nav">
+      <ul class="nav__items">
+        <li class="nav__item"><a href="/">Home</a></li>
+        <li class="nav__item"><a href="/about">About</a></li>
+        <li class="nav__item"><a href="/learn">Learn</a></li>
+        <li class="nav__item"><a href="/examples">Examples</a></li>
+        <li class="nav__item"><a href="/reference">Reference</a></li>
+        <li class="nav__item"><a href="//editor.zoemlang.tech">Editor</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="intro">
+      <h2>sleep<span class="filename-ext">.zoem</span></h2>
+      <!-- <button disabled>Open in editor</button> -->
+    </div>
+    <div class="help">
+      <p>The code is annotated: hover to learn more!</p>
+    </div>
+    <div class="zoem">
+      <pre><code><span class="token to">to</span> <span class="token function sleep">sl?eep</span><span class="token operator emdash">—</span><span class="token var">when</span><span class="token operator emdash">—</span><span class="token operator colon">:</span>
+    <span class="token string"><span class="quote">“</span>dreams<span class="quote">”</span></span><span class="token operator dot">.</span> <span class="token comment">† dreams dreams dreams</span>
+
+<span class="token function">sleep</span><span class="token operator emdash">—</span><span class="token operator string"><span class="quote">“</span>now<span class="quote">”</span></span><span class="token operator emdash">—</span>
+<span class="token function">sleep</span><span class="token operator emdash">—</span><span class="token string"><span class="quote">“</span>never<span class="quote">”</span></span><span class="token operator emdash">—</span>
+<span class="token function">seep</span><span class="token operator emdash">—</span><span class="token string"><span class="quote">“</span>continually<span class="quote">”</span></span><span class="token operator emdash">—</span></code></pre>
+    </div>
+
+    <div>
+      <h2>Walkthrough</h2>
+
+      <p>The first block defines a function. The question mark in the name of the function means either 0 or 1 of the token before, which means that it can be either sleep or seep. The two em dashes are analogous to opening and closing parentheses in other programming languages, and, similarly, parameters go in between the two symbols. This means that when the function is called, it expects something to be passed in, and it gives that thing the name when.</p>
+      <pre><code><span class="token to">to</span> <span class="token function sleep">sl?eep</span><span class="token operator emdash">—</span><span class="token var">when</span><span class="token operator emdash">—</span><span class="token operator colon">:</span></code></pre>
+
+      <p>Within the function, all we do is print the string “dreams”. The full stop or period indicates the end of the function. The function is called three times, so the resulting output comment has three instances of “dreams”. </p>
+      <pre><code>    <span class="token string"><span class="quote">“</span>dreams<span class="quote">”</span></span><span class="token operator dot">.</span> <span class="token comment">† dreams dreams dreams</span></code></pre>
+
+      <p>Elsewhere, we call the function three times, passing in different arguments each time. We can call the function using the identifier sleep or seep—both refer to the same function.</p>
+      <pre><code><span class="token function">sleep</span><span class="token operator emdash">—</span><span class="token operator string"><span class="quote">“</span>now<span class="quote">”</span></span><span class="token operator emdash">—</span>
+<span class="token function">sleep</span><span class="token operator emdash">—</span><span class="token string"><span class="quote">“</span>never<span class="quote">”</span></span><span class="token operator emdash">—</span>
+<span class="token function">seep</span><span class="token operator emdash">—</span><span class="token string"><span class="quote">“</span>continually<span class="quote">”</span></span><span class="token operator emdash">—</span></code></pre>
+    </div>
+  </main>
+
+  <footer>
+    <p><small>A project by <a href="https://za16.co" rel="external noopener noreferrer" target="_blank">Zaid Mukaddam</a>. Contribute on <a href="https://github.com/zoem-lang" rel="external noopener noreferrer" target="_blank">GitHub</a>.</small></p>
+  </footer>
+
+  <script src="/assets/js/scripts.js"></script>
+  
+</body>
+</html>
